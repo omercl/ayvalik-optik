@@ -1,0 +1,13 @@
+# Sistem
+.DS_Store
+
+# Node
+node_modules/
+package-lock.json
+
+# Build çıktıları (varsa)
+dist/
+build/
+
+# Vercel yerel ayar klasörü
+.vercel/

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/dff7699190.js" crossorigin="anonymous"></script>
+
+    <link
+      rel="preload"
+      href="assets/fonts/inter-v19-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/playfair-display-v39-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/playfair-display-v39-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages/gallery.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body data-page="gallery">
+    <site-header></site-header>
+
+    <main class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="breadcrumb" data-aos="fade-down">
+        <div class="crumb">
+          <a href="./">Ana Sayfa</a><span class="sep">/</span
+          ><span aria-current="page">Galeri</span>
+        </div>
+      </nav>
+
+      <h1 class="gallery-title" data-aos="fade-right">Galeri</h1>
+      <p class="gallery-subtitle" data-aos="fade-right">
+        Mağaza içi kareler, çerçeve detayları ve daha fazlası...
+      </p>
+
+      <section id="gallery-grid" class="gallery-grid" aria-label="Fotoğraf Galerisi"></section>
+
+      <!-- Pager -->
+      <nav class="pager" aria-label="Sayfalama">
+        <button id="prev" class="pg-arrow" aria-label="Önceki">‹</button>
+        <div id="nums" class="pg-nums"></div>
+        <button id="next" class="pg-arrow" aria-label="Sonraki">›</button>
+      </nav>
+    </main>
+
+    <div id="lb" class="lb" aria-hidden="true" role="dialog" aria-label="Büyütülmüş görsel">
+      <div class="lb-backdrop" data-close></div>
+      <div class="lb-box">
+        <button id="lbClose" class="lb-close" aria-label="Kapat">✕</button>
+        <img
+          id="lbImg"
+          class="lb-img"
+          alt=""
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+        />
+        <div class="lb-nav">
+          <button id="lbPrev" class="lb-btn" aria-label="Önceki">‹</button>
+          <button id="lbNext" class="lb-btn" aria-label="Sonraki">›</button>
+        </div>
+      </div>
+    </div>
+
+    <site-footer></site-footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

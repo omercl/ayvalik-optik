@@ -1,0 +1,233 @@
+/*********** HERO ***********/
+.hero {
+  padding: clamp(28px, 6vw, 60px) 0;
+}
+
+.hero-grid {
+  display: grid;
+  align-items: center;
+  gap: clamp(24px, 4vw, 64px);
+  grid-template-columns: 1fr;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.hero-title {
+  margin: 10px 0 20px;
+  line-height: 1.1;
+  font-weight: 600;
+  font-size: clamp(32px, 7vw, 60px);
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.01em;
+}
+
+.hero-subtitle {
+  margin: 0 0 clamp(20px, 3vw, 36px);
+  color: var(--color-muted);
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-image {
+  position: relative;
+  order: -1;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (width >= 48em) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .hero-image {
+    order: 0;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    margin-top: -5rem;
+  }
+
+  .hero-actions {
+    justify-content: left;
+  }
+}
+
+/*********** ABOUT US (SECTION) ***********/
+.about {
+  scroll-margin-top: var(--header-h);
+  background-color: var(--color-bg-alt);
+  padding: clamp(40px, 6vw, 76px) 0;
+  margin-top: 2rem;
+}
+
+.about-grid {
+  display: grid;
+  gap: clamp(20px, 4vw, 48px);
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.about-media img {
+  width: 90%;
+  margin: auto;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: clamp(26px, 6vw, 46px);
+  margin-bottom: 12px;
+}
+
+.about-text {
+  color: var(--color-muted);
+  font-size: clamp(15px, 2.4vw, 18px);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-actions {
+  text-align: center;
+}
+
+@media (width >= 48em) {
+  .about-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  .about-media img {
+    width: 100%;
+  }
+
+  .about-text {
+    margin-bottom: 40px;
+  }
+}
+
+/*********** PRODUCTS ***********/
+.products {
+  background: #fff;
+  padding: clamp(56px, 8vw, 96px) 0;
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: clamp(20px, 5vw, 40px);
+}
+
+.products-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: clamp(26px, 6vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.products-subtitle {
+  color: var(--color-muted);
+  font-size: clamp(14px, 2.2vw, 18px);
+  margin: 15px 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(16px, 3.5vw, 28px);
+}
+
+.product-card {
+  position: relative;
+  background: var(--color-bg);
+  border-radius: 20px;
+  padding: clamp(18px, 3.4vw, 28px);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: box-shadow 220ms var(--ease);
+  will-change: transform;
+  text-align: center;
+}
+
+.product-card:hover {
+  box-shadow: 0 14px 38px rgb(0 0 0 / 10%);
+}
+
+.product-accent {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120px 80px at 10% 0%, rgb(248 166 121 / 20%), transparent 60%),
+    radial-gradient(120px 80px at 90% 0%, rgb(111 44 62 / 15%), transparent 60%);
+  opacity: 0.6;
+}
+
+.product-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-secondary), rgb(111 44 62 / 90%));
+  color: #fff;
+  box-shadow: 0 8px 22px rgb(111 44 62 / 24%);
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.product-title {
+  font-weight: 700;
+  font-size: clamp(18px, 3.5vw, 22px);
+  margin-bottom: 8px;
+}
+
+.product-text {
+  color: var(--color-muted);
+  font-size: clamp(14px, 2.2vw, 16px);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (width >= 48em) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

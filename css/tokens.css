@@ -1,0 +1,18 @@
+:root {
+  --color-primary: #6f2c3e;
+  --color-secondary: #f8a679;
+  --color-text: #434140;
+  --color-muted: #5f5b59;
+  --color-bg: #fff;
+  --color-bg-alt: #f7f7f7;
+  --container: min(1200px, 94vw);
+  --page-gutter: clamp(16px, 4vw, 24px);
+  --header-h: 64px;
+  --shadow: 0 10px 30px rgb(0 0 0 / 8%);
+  --gap: clamp(16px, 2vw, 28px);
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --footer-bg: #0f1214;
+  --footer-border: rgb(255 255 255 / 8%);
+  --footer-text: #e7e5e4;
+  --footer-muted: #b8b4b2;
+}

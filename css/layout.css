@@ -1,0 +1,38 @@
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 10px 0 0;
+  font-size: 0.8rem;
+  color: #000;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+@media (width >= 48em) {
+  .breadcrumbs {
+    font-size: 0.9rem;
+  }
+}
+
+.crumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.crumb a {
+  color: var(--color-muted);
+}
+
+.crumb .sep {
+  opacity: 0.5;
+}

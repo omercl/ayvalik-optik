@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayvalık Optik</title>
+    <meta
+      name="description"
+      content="Ayvalık Optik — Gözlük, güneş gözlüğü, lens ve uzman göz sağlığı çözümleri."
+    />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/dff7699190.js" crossorigin="anonymous"></script>
+
+    <link
+      rel="preload"
+      href="assets/fonts/inter-v19-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/playfair-display-v39-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/playfair-display-v39-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/playfair-display-v39-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages/home.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body data-page="home">
+    <site-header></site-header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-right" id="hero-title">Gözleriniz Bize Emanet</h1>
+            <p class="hero-subtitle" data-aos="fade-right">
+              Hem net bir bakışa hem tarz sahibi bir görünüme kavuşun. Her çerçeve, bir karakter
+              ifadesi.
+            </p>
+
+            <div class="hero-actions">
+              <a href="glasses.html" class="btn btn-solid" data-aos="fade-up" data-aos-delay="150"
+                >Markalarımız</a
+              >
+              <a href="#about" class="btn btn-ghost" data-aos="fade-up" data-aos-delay="300"
+                >Bizi Tanıyın <span aria-hidden="true">➜</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-image" data-aos="fade-left">
+            <figure>
+              <img
+                src="assets/images/hero/hero.webp"
+                alt="Gözlük koleksiyonundan seçkiler"
+                width="1200"
+                height="800"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="about-media" data-aos="zoom-in">
+            <figure>
+              <img
+                src="/assets/images/hero/about-section.webp"
+                alt="Ayvalık Optik hakkında"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+
+          <div class="about-content">
+            <h2 class="about-title" data-aos="fade-left" id="about-title">Hakkımızda</h2>
+            <p class="about-text" data-aos="fade-left">
+              <strong>Ayvalık Optik</strong>, yıllardır göz sağlığı ve görme konforunu ön planda
+              tutarak hizmet veren bir optik mağazasıdır. Amacımız sadece şık bir gözlük satmak
+              değil; her müşterimizin ihtiyaçlarına uygun, kaliteli ve güvenilir çözümler sunmaktır.
+            </p>
+
+            <div class="about-actions" data-aos="fade-left">
+              <a href="about.html" class="btn btn-solid">Devamını Gör</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTS / ÜRÜN GRUPLARI -->
+      <section id="products" class="products" aria-labelledby="products-title">
+        <div class="container">
+          <header class="products-header" data-aos="fade-up">
+            <h2 class="products-title" id="products-title">Ürün Grupları</h2>
+            <p class="products-subtitle">
+              İhtiyacına göre en doğru seçimi yap: net görüş, stil ve konfor.
+            </p>
+          </header>
+
+          <div class="products-grid">
+            <!-- Gözlük Camları -->
+            <article class="product-card" data-aos="zoom-in" data-aos-delay="0">
+              <div class="product-accent"></div>
+              <div class="product-icon" aria-hidden="true">
+                <i class="fa-solid fa-glasses"></i>
+              </div>
+              <h3 class="product-title">Camlar</h3>
+              <p class="product-text">
+                İnce, hafif ve çizilmeye dayanıklı cam seçenekleri. Mavi ışık, fotokromik, yüksek
+                indeks ve daha fazlası.
+              </p>
+              <div class="product-actions">
+                <a class="btn btn-solid" href="glasses.html">Tüm Markalar</a>
+              </div>
+            </article>
+
+            <!-- Güneş Gözlükleri -->
+            <article class="product-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="product-accent"></div>
+              <div class="product-icon" aria-hidden="true">
+                <i class="fa-solid fa-sun"></i>
+              </div>
+              <h3 class="product-title">Güneş ve Optik Çerçeveler</h3>
+              <p class="product-text">
+                Polarize, UV400 koruma ve yüz tipine göre stil önerileri. Günlükten spora her tarza
+                uygun modeller.
+              </p>
+              <div class="product-actions">
+                <a class="btn btn-solid" href="frames.html">Tüm Markalar</a>
+              </div>
+            </article>
+
+            <!-- Lensler -->
+            <article class="product-card" data-aos="zoom-in" data-aos-delay="400">
+              <div class="product-accent"></div>
+              <div class="product-icon" aria-hidden="true">
+                <i class="fa-solid fa-eye"></i>
+              </div>
+              <h3 class="product-title">Lensler</h3>
+              <p class="product-text">
+                Günlük, aylık ve torik seçenekler. Uzun süreli konfor için nefes alabilir malzemeler
+                ve doğru bakım.
+              </p>
+              <div class="product-actions">
+                <a class="btn btn-solid" href="lens.html">Tüm Markalar</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <site-footer></site-footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

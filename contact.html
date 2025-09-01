@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/dff7699190.js" crossorigin="anonymous"></script>
+
+    <link
+      rel="preload"
+      href="assets/fonts/inter-v19-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/playfair-display-v39-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/playfair-display-v39-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages/contact.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body data-page="contact">
+    <site-header></site-header>
+
+    <main class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="breadcrumb" data-aos="fade-down">
+        <div class="crumb">
+          <a href="./">Ana Sayfa</a><span class="sep">/</span
+          ><span aria-current="page">İletişim</span>
+        </div>
+      </nav>
+
+      <h1 class="contact-title" data-aos="fade-right">Bizimle İletişime Geç</h1>
+      <p class="contact-subtitle" data-aos="fade-right">
+        Sorun, ölçüm randevusu alın, sipariş durumu sorun. Ne lazımsa, yaz.
+      </p>
+
+      <section class="contact-grid">
+        <div class="contact-card contact-card--bg reveal">
+          <div class="contact">
+            <div>
+              <h3>İletişim Bilgileri</h3>
+              <div class="list">
+                <div class="item">
+                  <div class="icon" aria-hidden="true">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <strong>Telefon</strong>
+                    <a href="tel:+902663126616">0 (266) 312 66 16</a>
+                    <br />
+                    <a href="tel:+905386677669">0 (538) 667 76 69</a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="icon" aria-hidden="true">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <strong>E‑posta</strong>
+                    <a href="mailto:info@ayvalikoptik.com">info@ayvalikoptik.com</a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="icon" aria-hidden="true">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <strong>Adres</strong>
+                    FevziPaşa Mah. Muradiye Çarşısı No:10 Ayvalık / BALIKESİR
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="socials" aria-label="Sosyal Medya">
+              <h3>Bizi Takip Edin</h3>
+              <div class="socials-icons">
+                <a
+                  aria-label="Instagram"
+                  href="https://www.instagram.com/ayvalikoptik"
+                  target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  aria-label="Facebook"
+                  href="https://www.facebook.com/ayvalikoptik"
+                  target="_blank"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="contact-card reveal">
+          <form
+            class="contact-form"
+            id="contactForm"
+            action="https://formspree.io/f/xrbagqnl"
+            method="post"
+            novalidate
+          >
+            <h3>Bize Yazın</h3>
+
+            <!-- Durum mesajı (başta gizli) -->
+            <div id="form-status" class="form-status" aria-live="polite" hidden></div>
+
+            <!-- Honeypot (botlar için tuzak) -->
+            <input
+              type="text"
+              name="website"
+              tabindex="-1"
+              autocomplete="off"
+              style="
+                position: absolute;
+                left: -10000px;
+                top: auto;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+              "
+              aria-hidden="true"
+            />
+
+            <!-- Konu başlığı -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="Ayvalık Optik: Yeni iletişim formu mesajı"
+            />
+
+            <!-- Reply-To için gizli alan (script dolduracak) -->
+            <input type="hidden" name="_replyto" value="" id="replytoHidden" />
+
+            <div class="row">
+              <div class="field">
+                <label for="firstName">Ad</label>
+                <input id="firstName" name="firstName" type="text" placeholder="Adınız" required />
+              </div>
+              <div class="field">
+                <label for="lastName">Soyad</label>
+                <input id="lastName" name="lastName" type="text" placeholder="Soyadınız" required />
+              </div>
+            </div>
+            <div class="row" style="grid-template-columns: 1fr 1fr">
+              <div class="field">
+                <label for="email">E‑posta</label>
+                <input id="email" name="email" type="email" placeholder="ornek@mail.com" required />
+              </div>
+              <div class="field">
+                <label for="phone">Telefon</label>
+                <input id="phone" name="phone" type="tel" placeholder="05XX XXX XX XX" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="topic">Konu</label>
+              <input id="topic" name="topic" type="text" placeholder="Konu" required />
+            </div>
+            <div class="field">
+              <label for="message">Mesaj</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Mesajınızı yazın..."
+                required
+              ></textarea>
+            </div>
+
+            <button class="btn btn-solid" type="submit" aria-live="polite">
+              Gönder
+              <span aria-hidden="true">➜</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Map -->
+      <section class="contact-card reveal" style="padding: 12px">
+        <h2 class="sr-only">Harita</h2>
+        <div id="map" role="region" aria-label="Ayvalık Optik Konumu">
+          <div style="width: 100%; height: 100%">
+            <iframe
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Ayval%C4%B1k%20OptikFevzipa%C5%9Fa%20Mahallesi,%20Muradiye%20%C3%87ar%C5%9F%C4%B1s%C4%B1%20No:10,%2010400%20Ayval%C4%B1k/Bal%C4%B1kesir+(Ayval%C4%B1k%20Optik)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              style="width: 100%; height: 600px; border: 0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Ayvalık Optik Harita"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <site-footer></site-footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

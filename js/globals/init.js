@@ -84,7 +84,22 @@ function navSetup() {
     }
   });
 
-  $$('.nav-menu li:not(.dropdown)').forEach((li) => on(li, 'click', closeNav));
+  // Make full row clickable on mobile and close menu after click
+  $$('.nav-menu li').forEach((li) => {
+    on(li, 'click', (e) => {
+      const isDropdownParent = li.classList.contains('dropdown');
+      const a = li.querySelector('a');
+      // If user taps the li but not directly the <a>, trigger the anchor
+      if (a && e.target !== a && !a.contains(e.target) && !isDropdownParent) {
+        a.click();
+      }
+
+      // Close nav for all non-dropdown parent clicks
+      if (!isDropdownParent) {
+        closeNav();
+      }
+    });
+  });
 
   const openDropdown = () => {
     if (!dropdownContent || !dropdownBtn) return;

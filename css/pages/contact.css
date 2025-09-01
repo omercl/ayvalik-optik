@@ -1,6 +1,6 @@
 /*********** CONTACT ***********/
 .contact-title {
-  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-size: clamp(2rem, 3vw, 2.4rem);
   margin: 10px 0 14px;
   font-weight: 700;
   font-family: 'Playfair Display', serif;

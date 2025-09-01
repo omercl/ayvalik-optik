@@ -5,7 +5,7 @@ class SiteFooter extends HTMLElement {
       <div class="container footer-grid">
         <!-- Brand / About -->
         <div class="footer-brand">
-          <a class="logo footer-logo" href="#">Ayvalık Optik</a>
+          <a class="logo footer-logo" href="index.html">Ayvalık Optik</a>
           <p class="footer-desc">
             En doğru cam ve çerçeve seçimleriyle, güvenilir danışmanlık
             eşliğinde net görüşü hayatınıza katıyoruz.

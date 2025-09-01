@@ -9,7 +9,6 @@ export function initAOS() {
     duration: 600,
     easing: 'ease-out',
     once: true,
-    offset: 200,
     disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
   });
 

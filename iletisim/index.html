@@ -25,13 +25,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link
-      rel="preload"
-      href="/assets/fonts/playfair-display-v39-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+
     <link
       rel="preload"
       href="/assets/fonts/playfair-display-v39-latin-700.woff2"
@@ -146,14 +140,7 @@
               name="website"
               tabindex="-1"
               autocomplete="off"
-              style="
-                position: absolute;
-                left: -10000px;
-                top: auto;
-                width: 1px;
-                height: 1px;
-                overflow: hidden;
-              "
+              class="honeypot-input"
               aria-hidden="true"
             />
 
@@ -177,7 +164,7 @@
                 <input id="lastName" name="lastName" type="text" placeholder="Soyadınız" required />
               </div>
             </div>
-            <div class="row" style="grid-template-columns: 1fr 1fr">
+            <div class="row row-contact">
               <div class="field">
                 <label for="email">E‑posta</label>
                 <input id="email" name="email" type="email" placeholder="ornek@mail.com" required />
@@ -210,13 +197,12 @@
       </section>
 
       <!-- Map -->
-      <section class="contact-card reveal" style="padding: 12px">
+      <section class="contact-card reveal map-container">
         <h2 class="sr-only">Harita</h2>
         <div id="map" role="region" aria-label="Ayvalık Optik Konumu">
-          <div style="width: 100%; height: 100%">
+          <div>
             <iframe
               src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Ayval%C4%B1k%20OptikFevzipa%C5%9Fa%20Mahallesi,%20Muradiye%20%C3%87ar%C5%9F%C4%B1s%C4%B1%20No:10,%2010400%20Ayval%C4%B1k/Bal%C4%B1kesir+(Ayval%C4%B1k%20Optik)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              style="width: 100%; height: 600px; border: 0"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               aria-label="Ayvalık Optik Harita"

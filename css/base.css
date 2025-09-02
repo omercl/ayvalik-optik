@@ -58,6 +58,9 @@
 html {
   scroll-behavior: smooth;
   height: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-synthesis-weight: none;
+  font-synthesis-style: none;
 }
 
 body {
@@ -100,6 +103,13 @@ ul {
 img {
   max-width: 100%;
   display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {

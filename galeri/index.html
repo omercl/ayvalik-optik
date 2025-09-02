@@ -17,8 +17,6 @@
     <meta name="apple-mobile-web-app-title" content="Ayvalık Optik" />
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
 
-    <script src="https://kit.fontawesome.com/dff7699190.js" crossorigin="anonymous" defer></script>
-
     <link
       rel="preload"
       href="/assets/fonts/inter-v19-latin-regular.woff2"
@@ -37,12 +35,47 @@
 
     <link rel="stylesheet" href="/css/tokens.css" />
     <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/layout.css" />
-    <link rel="stylesheet" href="/css/utilities.css" />
-    <link rel="stylesheet" href="/css/components.css" />
-    <link rel="stylesheet" href="/css/pages/gallery.css" />
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" defer />
+    <!-- NON-BLOCKING: preload + onload (kritik değil) -->
+    <link
+      rel="preload"
+      href="/css/layout.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/css/layout.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="/css/components.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/css/components.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="/css/utilities.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/css/utilities.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="/css/pages/gallery.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/css/pages/gallery.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="https://unpkg.com/aos@next/dist/aos.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /></noscript>
   </head>
   <body data-page="gallery">
     <site-header></site-header>
@@ -89,7 +122,8 @@
 
     <site-footer></site-footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/dff7699190.js" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
 
     <script type="module" src="/js/main.js"></script>
   </body>

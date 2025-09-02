@@ -13,13 +13,13 @@ class SiteFooter extends HTMLElement {
           <ul class="social">
             <li>
               <a aria-label="Instagram" href="https://www.instagram.com/ayvalikoptik"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
             </li>
             <li>
               <a aria-label="Facebook" href="https://www.facebook.com/ayvalikoptik"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                 ><i class="fa-brands fa-facebook"></i
               ></a>
             </li>

@@ -231,3 +231,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+strong {
+  color: #000;
+}

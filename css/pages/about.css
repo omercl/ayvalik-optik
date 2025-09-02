@@ -23,6 +23,7 @@
   font-size: clamp(15px, 2.5vw, 18px);
   line-height: 1.7;
   margin: 0.7rem 0;
+  text-indent: 2em;
 }
 
 .stack {
@@ -44,9 +45,25 @@
     margin: auto;
   }
 
-  .about-text {
+  .text-section {
     flex: 2;
     display: flex;
+    flex-direction: column;
     align-items: center;
   }
+}
+
+@media (768px <= width <= 1000px) {
+  .about-page {
+    flex-direction: column;
+  }
+
+  .about-page figure {
+    width: 75%;
+    margin: auto;
+  }
+}
+
+strong {
+  color: #000;
 }

@@ -108,7 +108,7 @@
 
 .to-top.show {
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: cursor;
   transform: translateY(0);
 }
 

@@ -4,6 +4,12 @@
   padding-inline: var(--page-gutter);
 }
 
+@media (width >= 1800px) {
+  .container {
+    max-width: 1500px;
+  }
+}
+
 /* Breadcrumbs */
 .breadcrumbs {
   display: flex;

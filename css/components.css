@@ -177,11 +177,20 @@
     transition: width 0.3s ease;
   }
 
-  .nav-menu li a:hover {
+  .nav-menu li a:hover:not(.active) {
     color: #000;
   }
 
-  .nav-menu li a:hover::after {
+  .nav-menu li a:hover:not(.active)::after {
+    width: 100%;
+  }
+
+  .nav-menu a.active {
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  .nav-menu a.active::after {
     width: 100%;
   }
 }

@@ -7,10 +7,10 @@ class SiteHeader extends HTMLElement {
 
         <ul class="nav-menu" id="primary-nav">
           <li>
-            <a href="/" class="nav-link">Anasayfa</a>
+            <a href="/" class="nav-link" data-nav="home">Anasayfa</a>
           </li>
           <li>
-            <a href="/hakkimizda" class="nav-link">Hakkımızda</a>
+            <a href="/hakkimizda" class="nav-link" data-nav="about">Hakkımızda</a>
           </li>
           <li class="dropdown">
             <a
@@ -19,6 +19,7 @@ class SiteHeader extends HTMLElement {
               aria-controls="dropdown-menu"
               href="#"
               class="dropdown-btn"
+              data-nav="brands"
               >Markalar <i class="fa fa-caret-down" aria-hidden="true"></i
             ></a>
             <ul class="dropdown-content" id="dropdown-menu">
@@ -32,10 +33,10 @@ class SiteHeader extends HTMLElement {
             </ul>
           </li>
           <li>
-            <a href="/galeri" class="nav-link">Galeri</a>
+            <a href="/galeri" class="nav-link" data-nav="gallery">Galeri</a>
           </li>
           <li>
-            <a href="/iletisim" class="nav-link">İletişim</a>
+            <a href="/iletisim" class="nav-link" data-nav="contact">İletişim</a>
           </li>
         </ul>
 
@@ -52,11 +53,30 @@ class SiteHeader extends HTMLElement {
     </header>
     `;
 
-    // Aktif link
-    const page = document.body.dataset.page || '';
-    this.querySelectorAll('[data-nav]').forEach((a) => {
-      if (a.dataset.nav === page) a.classList.add('active');
-    });
+    // Aktif link (pathname tabanlı)
+    const normalize = (p) => {
+      if (!p) return '/';
+      // remove trailing slash except root
+      return p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p;
+    };
+
+    const path = normalize(window.location.pathname);
+    const routeKeyMap = {
+      '/': 'home',
+      '/hakkimizda': 'about',
+      '/markalar': 'brands',
+      '/galeri': 'gallery',
+      '/iletisim': 'contact',
+      '/gozluk_camlari': 'brands',
+      '/cerceveler': 'brands',
+      '/lensler': 'brands',
+    };
+
+    const key = routeKeyMap[path];
+    if (key) {
+      const el = this.querySelector(`[data-nav="${key}"]`);
+      if (el) el.classList.add('active');
+    }
   }
 }
 

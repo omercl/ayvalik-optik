@@ -1,0 +1,72 @@
+.err-wrap {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.err-card {
+  width: 100%;
+  max-width: 680px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
+
+.err-badge {
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 48px;
+  line-height: 1;
+  padding: 8px 14px;
+  border-radius: 14px;
+  background: white;
+  color: var(--color-primary);
+}
+
+h1 {
+  margin: 16px 0 8px;
+  font-size: 28px;
+}
+
+.err-text {
+  margin: 0 0 30px;
+  color: var(--color-muted);
+  font-size: 16px;
+}
+
+.err-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.err-details {
+  margin-top: 14px;
+  color: var(--color-muted);
+}
+
+.err-details summary {
+  cursor: pointer;
+  padding: 8px 0;
+  outline: none;
+}
+
+.err-details[open] summary {
+  color: var(--color-text);
+}
+
+.err-details p {
+  margin: 6px 0 0;
+}
+
+.btn {
+  padding: 10px 16px;
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bir şeyler ters gitti | Ayvalık Optik</title>
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/error.css" />
+  </head>
+  <body>
+    <main class="err-wrap" role="main" aria-labelledby="err-title">
+      <div class="err-card">
+        <div class="err-badge">5xx</div>
+        <h1 id="err-title">Sunucu kafayı yedi.</h1>
+        <p class="err-text">Geçici bir sorun var. Birazdan tekrar dene; ya da bize yaz.</p>
+
+        <div class="err-actions">
+          <a class="btn btn-solid" href="/">Ana sayfa</a>
+          <a class="btn btn-ghost" href="/iletisim">İletişim</a>
+        </div>
+
+        <details class="err-details">
+          <summary>Ne oldu?</summary>
+          <p>
+            Sunucu <strong>500/502/503/504</strong> gibi bir hata döndürdü. Yük altında olabilir ya
+            da bakım var.
+          </p>
+        </details>
+      </div>
+    </main>
+  </body>
+</html>

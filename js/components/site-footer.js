@@ -69,7 +69,7 @@ class SiteFooter extends HTMLElement {
           <a class="designer" href="" rel="noopener">Designed by Ömer Çolak</a>
         </div>
         <button class="to-top" aria-label="Yukarı çık">
-          <i class="material-icons" aria-hidden="true">north</i>
+          <i class="fa-solid fa-arrow-up"></i>
         </button>
       </div>
     </footer>

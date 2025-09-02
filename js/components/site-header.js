@@ -1,6 +1,5 @@
 class SiteHeader extends HTMLElement {
   connectedCallback() {
-    // Light DOM: mevcut CSS sınıfların aynen çalışır
     this.innerHTML = `
       <header class="header" role="banner" data-aos="fade-down">
       <nav class="navbar container" aria-label="Ana menü">
@@ -46,12 +45,13 @@ class SiteHeader extends HTMLElement {
           aria-expanded="false"
           aria-label="Menüyü aç/kapat"
         >
-          <i class="menu-icon material-icons" aria-hidden="true">menu</i>
-          <i class="close-icon material-icons" aria-hidden="true">close</i>
+          <i class="menu-icon fa-solid fa-bars fa-xl" aria-hidden="true"></i>
+          <i class="close-icon fa-solid fa-xmark fa-xl" aria-hidden="true"></i>
         </button>
       </nav>
     </header>
     `;
+
     // Aktif link
     const page = document.body.dataset.page || '';
     this.querySelectorAll('[data-nav]').forEach((a) => {

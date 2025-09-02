@@ -4,14 +4,14 @@ class SiteHeader extends HTMLElement {
     this.innerHTML = `
       <header class="header" role="banner" data-aos="fade-down">
       <nav class="navbar container" aria-label="Ana menü">
-        <a class="logo" href="./">Ayvalık Optik</a>
+        <a class="logo" href="/">Ayvalık Optik</a>
 
         <ul class="nav-menu" id="primary-nav">
           <li>
-            <a href="./" class="nav-link">Anasayfa</a>
+            <a href="/" class="nav-link">Anasayfa</a>
           </li>
           <li>
-            <a href="about.html" class="nav-link">Hakkımızda</a>
+            <a href="/hakkimizda" class="nav-link">Hakkımızda</a>
           </li>
           <li class="dropdown">
             <a
@@ -24,19 +24,19 @@ class SiteHeader extends HTMLElement {
             ></a>
             <ul class="dropdown-content" id="dropdown-menu">
               <li>
-                <a href="glasses.html">Gözlük Camları</a>
+                <a href="/gozluk_camlari">Gözlük Camları</a>
               </li>
               <li>
-                <a href="frames.html">Güneş ve Optik Çerçeveler</a>
+                <a href="/cerceveler">Güneş ve Optik Çerçeveler</a>
               </li>
-              <li><a href="lens.html">Lensler</a></li>
+              <li><a href="/lensler">Lensler</a></li>
             </ul>
           </li>
           <li>
-            <a href="gallery.html" class="nav-link">Galeri</a>
+            <a href="/galeri" class="nav-link">Galeri</a>
           </li>
           <li>
-            <a href="contact.html" class="nav-link">İletişim</a>
+            <a href="/iletisim" class="nav-link">İletişim</a>
           </li>
         </ul>
 

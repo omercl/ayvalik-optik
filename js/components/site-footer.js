@@ -5,7 +5,7 @@ class SiteFooter extends HTMLElement {
       <div class="container footer-grid">
         <!-- Brand / About -->
         <div class="footer-brand">
-          <a class="logo footer-logo" href="index.html">Ayvalık Optik</a>
+          <a class="logo footer-logo" href="/">Ayvalık Optik</a>
           <p class="footer-desc">
             En doğru cam ve çerçeve seçimleriyle, güvenilir danışmanlık
             eşliğinde net görüşü hayatınıza katıyoruz.
@@ -30,12 +30,12 @@ class SiteFooter extends HTMLElement {
         <nav class="footer-links" aria-label="Hızlı Erişim">
           <h3 class="footer-col-title">Hızlı Erişim</h3>
           <ul>
-            <li><a href="about.html">Hakkımızda</a></li>
-            <li><a href="glasses.html">Gözlük Camları</a></li>
-            <li><a href="frames.html">Güneş ve Optik Çerçeveler</a></li>
-            <li><a href="lens.html">Lensler</a></li>
-            <li><a href="gallery.html">Galeri</a></li>
-            <li><a href="contact.html">İletişim</a></li>
+            <li><a href="/hakkimizda">Hakkımızda</a></li>
+            <li><a href="/gozluk_camlari">Gözlük Camları</a></li>
+            <li><a href="/cerceveler">Güneş ve Optik Çerçeveler</a></li>
+            <li><a href="/lensler">Lensler</a></li>
+            <li><a href="/galeri">Galeri</a></li>
+            <li><a href="/iletisim">İletişim</a></li>
           </ul>
         </nav>
 

@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cam Markaları | Ayvalık Optik</title>
+    <title>Lens Markaları | Ayvalık Optik</title>
     <meta
       name="description"
-      content="Zeiss, Hoya, Seiko ve diğer dünyaca ünlü cam markaları listesi."
+      content="Acuvue, Colorivision, Air Optix ve diğer dünyaca ünlü lens markaları listesi."
     />
 
-    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Ayvalık Optik" />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
 
     <script src="https://kit.fontawesome.com/dff7699190.js" crossorigin="anonymous"></script>
 
@@ -22,14 +22,14 @@
 
     <link
       rel="preload"
-      href="assets/fonts/inter-v19-latin-regular.woff2"
+      href="/assets/fonts/inter-v19-latin-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="assets/fonts/playfair-display-v39-latin-regular.woff2"
+      href="/assets/fonts/playfair-display-v39-latin-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -44,7 +44,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
-  <body data-page="brands" data-category="glasses">
+  <body data-page="brands" data-category="lens">
     <site-header></site-header>
 
     <main class="brands">
@@ -52,23 +52,24 @@
         <!-- Breadcrumbs -->
         <nav class="breadcrumbs" aria-label="breadcrumb" data-aos="fade-down">
           <div class="crumb">
-            <a href="./">Ana Sayfa</a><span class="sep">/</span><a href="glasses.html">Markalar</a
-            ><span class="sep">/</span><span aria-current="page">Gözlük Camları</span>
+            <a href="/">Ana Sayfa</a><span class="sep">/</span
+            ><a href="/gozluk_camlari/">Markalar</a><span class="sep">/</span
+            ><span aria-current="page">Lensler</span>
           </div>
         </nav>
+
         <nav class="brands-tabs" aria-label="Marka kategorileri">
-          <a href="glasses.html" class="tab" data-tab="cam" aria-current="page">Cam</a>
-          <a href="frames.html" class="tab" data-tab="cerceve">Çerçeve</a>
-          <a href="lens.html" class="tab" data-tab="lens">Lens</a>
+          <a href="/gozluk_camlari/" class="tab" data-tab="cam">Cam</a>
+          <a href="/cerceveler/" class="tab" data-tab="cerceve">Çerçeve</a>
+          <a href="/lensler/" class="tab" data-tab="lens" aria-current="page">Lens</a>
         </nav>
 
         <div class="brands-flex">
           <header class="brands-header" data-aos="fade-left">
-            <h1 class="brands-title">Cam Markaları</h1>
-            <p class="brands-subtitle">Görüş kalitesinde dünya standartları.</p>
+            <h1 class="brands-title">Lens Markaları</h1>
+            <p class="brands-subtitle">Konfor ve net görüş için seçtiklerimiz.</p>
           </header>
 
-          <!-- Search/filter -->
           <div class="brands-controls" data-aos="fade-right">
             <label class="sr-only" for="brandSearch">Marka ara</label>
             <input
@@ -81,9 +82,8 @@
           </div>
         </div>
 
-        <!-- Grid mount point -->
         <section id="brandsGrid" class="brands-grid" aria-live="polite">
-          <h2 class="sr-only">Gözlük Camı Markaları Listesi</h2>
+          <h2 class="sr-only">Lens Markaları Listesi</h2>
         </section>
       </div>
     </main>
@@ -92,6 +92,6 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
   </body>
 </html>

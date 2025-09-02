@@ -7,6 +7,7 @@
   padding: 10px 16px;
   font-size: 0.8rem;
   border-radius: 10rem;
+  border: none;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   transition: all 0.3s ease;

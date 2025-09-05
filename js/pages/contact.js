@@ -1,11 +1,26 @@
 import { $, on } from '../core/dom.js';
 
-const showStatus = (statusEl, msg, ok = true) => {
+let __statusHideTimer = null;
+const showStatus = (statusEl, msg, ok = true, ttlMs = 5000) => {
   if (!statusEl) return;
+
+  if (__statusHideTimer) {
+    clearTimeout(__statusHideTimer);
+    __statusHideTimer = null;
+  }
+
   statusEl.hidden = false;
   statusEl.textContent = msg;
   statusEl.classList.remove('is-error', 'is-ok');
   statusEl.classList.add(ok ? 'is-ok' : 'is-error');
+
+  if (ttlMs && Number.isFinite(ttlMs) && ttlMs > 0) {
+    __statusHideTimer = setTimeout(() => {
+      statusEl.hidden = true;
+      statusEl.textContent = '';
+      statusEl.classList.remove('is-error', 'is-ok');
+    }, ttlMs);
+  }
 };
 
 const setFieldError = (input, hasError = false) => {
@@ -106,6 +121,17 @@ export function init() {
   const replytoHidden = $('#replytoHidden');
   const phoneEl = $('#phone');
 
+  // Hide status when user starts editing again
+  if (statusEl) {
+    form.addEventListener('input', () => {
+      if (!statusEl.hidden) {
+        statusEl.hidden = true;
+        statusEl.textContent = '';
+        statusEl.classList.remove('is-error', 'is-ok');
+      }
+    });
+  }
+
   if (phoneEl) {
     phoneEl.addEventListener('input', () => {
       let val = phoneEl.value.replace(/\D/g, ''); // sadece rakamlar
@@ -160,6 +186,12 @@ export function init() {
       btn.innerText = 'Gönderiliyor…';
     }
 
+    if (statusEl && !statusEl.hidden) {
+      statusEl.hidden = true;
+      statusEl.textContent = '';
+      statusEl.classList.remove('is-error', 'is-ok');
+    }
+
     try {
       const res = await fetch(form.action, {
         method: form.method || 'POST',
@@ -168,7 +200,12 @@ export function init() {
       });
 
       if (res.ok) {
-        showStatus(statusEl, 'Teşekkürler! Mesajın ulaştı. En kısa sürede dönüş yapacağız.', true);
+        showStatus(
+          statusEl,
+          'Teşekkürler! Mesajın ulaştı. En kısa sürede dönüş yapacağız.',
+          true,
+          5000,
+        );
         form.reset();
         form.querySelectorAll('.field.is-invalid').forEach((f) => f.classList.remove('is-invalid'));
         form
@@ -182,10 +219,10 @@ export function init() {
         } catch (err) {
           void err;
         }
-        showStatus(statusEl, msg, false);
+        showStatus(statusEl, msg, false, 6000);
       }
     } catch {
-      showStatus(statusEl, 'Ağ hatası: İnternet bağlantını kontrol et.', false);
+      showStatus(statusEl, 'Ağ hatası: İnternet bağlantını kontrol et.', false, 6000);
     } finally {
       if (btn) {
         btn.disabled = false;

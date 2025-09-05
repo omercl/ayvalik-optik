@@ -1,3 +1,15 @@
+# === REWRITE / HTTPS / WWW ===
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# www -> non-www (non-www istiyoruz; www istiyorsan bu iki satırı tersine çevir)
+RewriteCond %{HTTP_HOST} ^www\.ayvalikoptik\.com$ [NC]
+RewriteRule ^ https://ayvalikoptik.com%{REQUEST_URI} [L,R=301]
+</IfModule>
+
 # Özel hata sayfaları
 ErrorDocument 404 /404.html
 ErrorDocument 500 /50x.html

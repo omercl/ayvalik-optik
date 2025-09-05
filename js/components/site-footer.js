@@ -45,7 +45,7 @@ class SiteFooter extends HTMLElement {
           <ul class="contact-list">
             <li>
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-              <span>FevziPaşa Mah. Muradiye Çarşısı No:10 Ayvalık / BALIKESİR</span>
+              <a href="https://maps.app.goo.gl/w8sDrehKhcpsnFsq7" target="_blank" rel="noopener noreferrer">FevziPaşa Mah. Muradiye Çarşısı No:10 Ayvalık / BALIKESİR</a>
             </li>
             <li>
               <i class="fa-solid fa-envelope" aria-hidden="true"></i>

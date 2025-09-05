@@ -21,10 +21,14 @@ function cardTemplate(item) {
   const safeName = String(item.name || '?')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;');
+  const hasLogo = Boolean(item && item.logo);
+  const logoHtml = hasLogo
+    ? `<img class="brand-logo" src="${item.logo}" alt="${safeName} logosu" width="220" height="72" loading="lazy" decoding="async" />`
+    : textLogo(item.name);
   return `
-    <article class="brand-card reveal" role="listitem" aria-label="${safeName}">
+        <article class="brand-card reveal ${hasLogo ? 'has-logo' : ''}" role="listitem" aria-label="${safeName}" data-name="${safeName}">
       <div class="brand-media">
-        ${textLogo(item.name)}
+        ${logoHtml}
       </div>
     </article>
   `;
@@ -34,6 +38,7 @@ function render(list) {
   const grid = $('#brandsGrid');
   if (!grid) return;
   grid.innerHTML = list.map(cardTemplate).join('');
+  wireLogoFallback(grid);
   setupReveal(grid);
 }
 
@@ -68,6 +73,29 @@ function setupReveal(root) {
     { root: null, rootMargin: '0px 0px 25% 0px', threshold: 0.01 },
   );
   items.forEach((el) => io.observe(el));
+}
+
+function wireLogoFallback(root) {
+  if (!root) return;
+  const imgs = root.querySelectorAll('img.brand-logo');
+  if (!imgs.length) return;
+  imgs.forEach((img) => {
+    img.addEventListener(
+      'error',
+      () => {
+        const card = img.closest('.brand-card');
+        const media = card && card.querySelector('.brand-media');
+        const name = (card && card.dataset && card.dataset.name) || '?';
+        if (media) {
+          media.innerHTML = textLogo(name);
+        }
+        if (card) {
+          card.classList.remove('has-logo');
+        }
+      },
+      { once: true },
+    );
+  });
 }
 
 function filterByQuery(all, q) {
